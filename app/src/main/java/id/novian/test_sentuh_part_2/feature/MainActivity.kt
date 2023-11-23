@@ -68,19 +68,21 @@ class MainActivity : AppCompatActivity() {
 
                 when(data) {
 
-                    is DataState.Initial -> {}
+                    DataState.Initial -> {}
 
-                    is DataState.Loading -> {
+                    DataState.Loading -> {
                         recyclerView.loadSkeleton(R.layout.item_joke) {
                             shimmer(customShimmer)
                         }
                     }
 
-                    is DataState.Empty -> {
+                    DataState.Empty -> {
+                        recyclerView.hideSkeleton()
                         // Show Empty Screen. Not implemented yet.
                     }
 
                     is DataState.Error -> {
+                        recyclerView.hideSkeleton()
                         Toast.makeText(this@MainActivity, "Got error with message: ${data.message}", Toast.LENGTH_SHORT).show()
                     }
 
@@ -88,6 +90,8 @@ class MainActivity : AppCompatActivity() {
                         recyclerView.hideSkeleton()
                         jokeAdapter.submitJokes(data.data)
                     }
+
+                    else -> {}
                 }
 
             }
