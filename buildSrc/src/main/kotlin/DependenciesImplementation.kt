@@ -12,6 +12,7 @@ object DependenciesImplementation {
         implementation(Dependency.Layout.androidMaterial)
         implementation(Dependency.Layout.skeletonLayout)
         implementation(Dependency.Layout.shimmer)
+        implementation(Dependency.Layout.fragment)
     }
 
     fun DependencyHandler.hilt() {

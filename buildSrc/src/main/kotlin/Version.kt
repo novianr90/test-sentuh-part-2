@@ -12,6 +12,7 @@ object Version {
         const val materialVersion = "1.9.0"
         const val skeletonLayoutVersion = "1.0.0-beta01"
         const val shimmerVersion = "0.5.0"
+        const val fragmentKtx = "1.6.2"
     }
 
     object Hilt {

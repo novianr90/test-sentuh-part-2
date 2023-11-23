@@ -12,6 +12,7 @@ object Dependency {
         const val androidMaterial = "com.google.android.material:material:${Version.Layout.materialVersion}"
         const val skeletonLayout = "com.ericktijerou.koleton:koleton:${Version.Layout.skeletonLayoutVersion}"
         const val shimmer = "com.facebook.shimmer:shimmer:${Version.Layout.shimmerVersion}"
+        const val fragment = "androidx.fragment:fragment-ktx:${Version.Layout.fragmentKtx}"
     }
 
     object Hilt {
